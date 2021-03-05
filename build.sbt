@@ -1,5 +1,5 @@
-val scala212 = "2.12.12"
-val scala213 = "2.13.4"
+val scala212 = "2.12.13"
+val scala213 = "2.13.5"
 val scala3   = "3.0.0-M3"
 
 inThisBuild(
@@ -48,7 +48,7 @@ val core = project
   .settings(
     name := "http4s-timer-core",
     libraryDependencies += "org.http4s" %% "http4s-core" % "1.0.0-M19",
-    libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "6.4.1",
+    libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "6.4.2",
     libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value))
   )
 
