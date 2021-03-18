@@ -2,8 +2,6 @@ val scala212 = "2.12.13"
 val scala213 = "2.13.5"
 val scala3   = "3.0.0-RC1"
 
-ThisBuild / resolvers += Resolver.JCenterRepository
-
 inThisBuild(
   List(
     organization := "pl.datart",
