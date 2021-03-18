@@ -2,6 +2,8 @@ val scala212 = "2.12.13"
 val scala213 = "2.13.5"
 val scala3   = "3.0.0-RC1"
 
+resolvers += "Maven 2" at "https://repo1.maven.org/maven2/"
+
 inThisBuild(
   List(
     organization := "pl.datart",
