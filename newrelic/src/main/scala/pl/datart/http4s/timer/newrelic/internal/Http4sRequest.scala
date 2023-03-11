@@ -6,7 +6,7 @@ import com.newrelic.api.agent.{ExtendedRequest, HeaderType}
 import org.http4s.Request
 import org.typelevel.ci.CIString
 
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 
 private[newrelic] class Http4sRequest[F[_]](request: Request[F],
                                             user: Option[String])

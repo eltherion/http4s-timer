@@ -1,6 +1,5 @@
-val scala212 = "2.12.15"
-val scala213 = "2.13.8"
-val scala3   = "3.0.2"
+val scala213 = "2.13.10"
+val scala3   = "3.2.2"
 
 inThisBuild(
   List(
@@ -17,7 +16,7 @@ val publishSettings = Seq(
   scmInfo := Some(ScmInfo(url("https://github.com/eltherion/http4s-timer"), "scm:git:git@github.com:eltherion/http4s-timer.git")),
   publishTo := sonatypePublishToBundle.value,
   publishMavenStyle := true,
-  publishArtifact in Test := false,
+  Test / publishArtifact := false,
   pomIncludeRepository := { _ => false },
   pomExtra := (
     <developers>
@@ -32,7 +31,7 @@ val publishSettings = Seq(
 
 
 val commonSettings = Seq(
-  crossScalaVersions := List(scala212, scala213, scala3),
+  crossScalaVersions := List(scala213, scala3),
     scalacOptions ++= {
       (if (isDotty.value) Seq("-source:3.0-migration") else Nil) ++
         (if (scalaVersion.value >= "2.13.0") Seq() else Seq("-Ypartial-unification")) ++
@@ -47,8 +46,8 @@ val core = project
   .settings(publishSettings)
   .settings(
     name := "http4s-timer-core",
-    libraryDependencies += "org.http4s" %% "http4s-core" % "1.0.0-M30",
-    libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "7.6.0",
+    libraryDependencies += "org.http4s" %% "http4s-core" % "1.0.0-M39",
+    libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "8.0.1",
     libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value))
   )
 
@@ -62,7 +61,7 @@ val newrelic = project
   ) dependsOn core
 
 val noPublishSettings = Seq(
-  skip in publish := true,
+  publish / skip := true,
   publishArtifact := false
 )
 

@@ -13,7 +13,7 @@ import pl.datart.http4s.timer.newrelic.internal.{
   Http4sResponse
 }
 
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 import scala.util.Try
 
 class NewRelicRequestTimer[F[_]](implicit F: Sync[F]) extends RequestTimer[F] {
