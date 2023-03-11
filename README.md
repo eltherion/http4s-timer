@@ -42,9 +42,11 @@ Similarly, you should modify any `AuthedRoutes` to use `TimedAuthedRoutes`.
 
 ## Library Dependencies
 
-The core library is dependent on `"org.http4s" %% "http4s-core" % "1.0.0-M30"`.
+The core library is dependent on `"org.http4s" %% "http4s-core" % "1.0.0-M39"`.
+Starting from `"1.0.0-M31"` Scala 2.12 is not supported and up to version `"1.0.0-M37"` there is a known vulnerability, 
+so eventually versions 1.x.y and higher of `http4s-timer` have dropped support for Scala 2.12.
 
-The newrelic library is also dependent on `"com.newrelic.agent.java" % "newrelic-api" % "7.4.2"`
+The newrelic library is also dependent on `"com.newrelic.agent.java" % "newrelic-api" % "8.0.1"`
 
 ## Origin & credits
 
