@@ -2,9 +2,8 @@ os: osx
 
 language: scala
 scala:
-  - 2.12.15
-  - 2.13.7
-  - 3.0.0
+  - 2.13.10
+  - 3.2.2
 jdk:
   - oraclejdk9
   - openjdk9
