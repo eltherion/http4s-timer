@@ -1,6 +1,6 @@
 addSbtPlugin("org.xerial.sbt"   % "sbt-sonatype" % "3.9.18")
 addSbtPlugin("com.github.sbt"   % "sbt-pgp"      % "2.2.1")
 addSbtPlugin("com.github.sbt"   % "sbt-git"      % "2.0.1")
-addSbtPlugin("com.timushev.sbt" % "sbt-updates"  % "0.6.3")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates"  % "0.7.1")
 addSbtPlugin("com.dwijnand"     % "sbt-dynver"   % "4.1.1")
 addSbtPlugin("ch.epfl.lamp"     % "sbt-dotty"    % "0.5.5")
