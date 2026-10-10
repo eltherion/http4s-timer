@@ -46,7 +46,7 @@ val core = project
   .settings(publishSettings)
   .settings(
     name := "http4s-timer-core",
-    libraryDependencies += "org.http4s" %% "http4s-core" % "1.0.0-M39",
+    libraryDependencies += "org.http4s" %% "http4s-core" % "1.0.0-M49",
     libraryDependencies += "com.newrelic.agent.java" % "newrelic-api" % "8.0.1",
     libraryDependencies := libraryDependencies.value.map(_.withDottyCompat(scalaVersion.value))
   )
